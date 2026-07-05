@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Pets - Carrito</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts.css" />
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="img/logo_pets_center.png" class="pets" alt="Logo" />
+          </a>
+        </div>
+        <div class="hamburger" id="hamburger">☰</div>
+        <div class="menu" id="menu">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Perros</a></li>
+            <li><a href="#">Gatos</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container my-5">
+        
+        <!-- Estado Vacío -->
+        <div id="carrito-vacio-msg" class="tu_carrito">
+            <h1>TU CARRITO</h1>
+            <span>(vacío)</span>
+        </div>
+        
+        <!-- Contenedor Principal del Carrito -->
+        <div id="contenedor-carrito-completo" class="contenedor_carrito disabled">
+          
+          <!-- Acá adentro JS va a inyectar los productos dinámicamente -->
+          <div id="productos-carrito-lista"></div>
+
+          <!-- Acciones del Carrito -->
+          <div class="carrito_accion">
+              <button id="btn-vaciar" class="carrito_vaciar">Vaciar Carrito</button>
+              <div class="carrito_precio_total">
+                <p>TOTAL:</p>
+                <h3 id="Total">$0</h3>
+              </div>
+              <button id="btn-comprar" class="carrito_comprar">Comprar</button>
+          </div>
+        </div>
+
+        <!-- Mensaje de Éxito -->
+        <div id="mensaje-compra" class="tu_carrito disabled">
+            <h1>¡GRACIAS POR TU COMPRA!</h1>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="copy">
+        <p>Pets Center S.A. © 2026 - Todos los derechos reservados</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

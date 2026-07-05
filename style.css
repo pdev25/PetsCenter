@@ -1,0 +1,580 @@
+/* ==========================================
+   CONFIGURACIÓN GENERAL Y RESET (ORIGINAL)
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat-Regular";
+  font-weight: 400;
+}
+
+main {
+  margin-top: 50px;
+}
+
+/* ==========================================
+   NAVBAR (ORIGINAL + AJUSTE CONTADOR CARRITO)
+   ========================================== */
+.logo {
+  margin: 0px 45px;
+}
+
+.pets {
+  width: 90px;
+}
+
+.navbar {
+  font-family: "Montserrat-Regular";
+  font-weight: 100;
+  background-color: rgb(99, 25, 164);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu ul {
+  margin: 0;
+  display: flex;
+  gap: 40px;
+  padding-right: 40px;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-family: "Montserrat-Regular";
+  font-size: 1.2em;
+}
+
+/* Estilo integrado para el contador dinámico del carrito */
+#cart-count {
+  background-color: rgb(243, 170, 24);
+  color: white;
+  font-family: "Montserrat-Bold";
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 50%;
+  font-size: 0.85em;
+  margin-left: 5px;
+}
+
+/* MENÚ HAMBURGUESA (Móvil) */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(99, 25, 164);
+    z-index: 1000;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+    gap: 0;
+  }
+
+  .menu li {
+    padding: 10px 0;
+  }
+
+  .menu.active {
+    max-height: 100vh;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* ==========================================
+   CAROUSEL (ORIGINAL)
+   ========================================== */
+#carouselExampleIndicators {
+  display: none;
+}
+
+div.carousel-caption {
+  padding: 0;
+  margin-bottom: 100px;
+}
+
+.carousel-caption {
+  display: flex;
+  flex-flow: column wrap;
+  left: 15%;
+  right: auto;
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 420px;
+  text-align: left;
+  padding: 0;
+}
+
+.carousel-caption h1 {
+  margin: 0;
+  color: rgb(243, 170, 24);
+  font-family: "Montserrat-ExtraBold";
+  font-size: clamp(2.5rem, 4.5vw, 8rem);
+  font-weight: 900;
+  text-align: left;
+  line-height: 1.1;
+}
+
+.carousel-caption p {
+  margin-top: 10px;
+  color: white;
+  font-family: "Montserrat-ExtraBold";
+  font-size: clamp(1rem, 3vw, 3rem);
+  font-weight: 900;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.boton_0 {
+  font-family: "Montserrat-Medium";
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  color: white;
+  padding: 10px;
+  width: 250px;
+  background-color: rgb(243, 170, 24);
+  border: none;
+  border-radius: 50px;
+}
+
+/* ==========================================
+   PRODUCTOS (ORIGINAL)
+   ========================================== */
+.card_contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-bottom: 100px;
+}
+
+.card_product {
+  width: 250px;
+  flex-grow: 1;
+  margin-top: 50px;
+  text-align: center;
+  justify-content: center;
+  flex: 1 1 250px;
+  transition: .3s;
+}
+
+.card_product:hover {
+  transform: translateY(-25px);
+}
+
+.alimento {
+  width: 270px;
+  max-width: 100%;
+  height: auto;
+}
+
+.card_product h2 {
+  font-family: "Montserrat-Medium";
+  font-weight: 900;
+  margin: 12px;
+  font-size: 1.6em;
+  color: rgb(100, 100, 100);
+}
+
+.card_product p {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: rgb(100, 100, 100);
+}
+
+.card_product span {
+  font-family: "Montserrat-Bold";
+  color: rgb(243, 170, 24);
+  display: block;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.boton {
+  font-family: "Montserrat-Medium";
+  font-size: 18px;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 15px;
+  width: 200px;
+  background-color: rgb(243, 170, 24);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.banner {
+  width: 100%;
+  height: 500px;
+  background-color: antiquewhite;
+}
+
+/* ==========================================
+   NUESTRAS MARCAS (ORIGINAL)
+   ========================================== */
+.marcas {
+  display: flex;
+  flex-flow: row wrap;
+  margin: auto;
+  margin-bottom: 100px;
+  background-color: white;
+  width: 80%;
+  justify-content: center;
+  border-top: 1px solid rgb(243, 170, 24);
+}
+
+.nuestras_marcas h4 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-family: "Montserrat-Regular";
+  font-size: 25px;
+  color: rgb(171, 171, 171);
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.logos {
+  padding-top: 100px;
+  border-top: 1px solid rgb(243, 170, 24);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.logos_marcas {
+  display: flex;
+  width: 150px;
+  margin: 20px 20px;
+}
+
+/* ==========================================
+   FOOTER (ORIGINAL)
+   ========================================== */
+.contenedor_footer {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: rgb(99, 25, 164);
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+.contenedor_footer_2 {
+  margin: 0px auto 100px;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.item_footer_1 {
+  display: flex;
+  flex-flow: row wrap;
+  width: 150px;
+  margin-top: 50px;
+  margin-left: 30px;
+  justify-content: left;
+}
+
+.logo_footer {
+  margin: 100px auto 0px;
+  display: flex;
+  flex-flow: row wrap;
+  width: 73%;
+  border-bottom: solid 1px rgb(255, 255, 255);
+  justify-content: left;
+}
+
+.logo_footer img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.tienda_online h3 {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: "Montserrat-Regular";
+  font-size: 1.25em;
+  margin: 20px 0;
+}
+
+.tienda_online a {
+  display: block;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: "Montserrat-Regular";
+  font-size: 0.85em;
+  margin: 8px 0;
+}
+
+.copy {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(243, 170, 24);
+  width: 100%;
+  padding: 35px 0 15px 0;
+}
+
+.copy p {
+  color: white;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.salto-movil {
+  display: flex;
+}
+
+/* ==========================================
+   VISTA DEL CARRITO (ORIGINAL)
+   ========================================== */
+.contenedor_carrito {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px auto;
+  width: 80%;
+}
+
+.carrito_container {
+  margin: 20px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(241, 241, 240);
+  border-radius: 50px;
+  padding: 15px;
+}
+
+.tu_carrito {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.tu_carrito h1 {
+  width: auto;
+  display: block;
+  margin: 0;
+  font-family: "Montserrat-Bold";
+  color: rgb(99, 25, 164);
+  font-size: 3.5em;
+  font-weight: 700;
+}
+
+.tu_carrito span {
+  font-family: "Montserrat-Bold";
+  color: rgb(173, 173, 173);
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.carrito_container h2 {
+  font-family: "Montserrat-Medium";
+  font-weight: 900;
+  font-size: 1.6em;
+  color: rgb(100, 100, 100);
+}
+
+.carrito_container p {
+  font-size: 1.2em;
+  color: rgb(100, 100, 100);
+}
+
+.carrito_imagen {
+  width: 7rem;
+}
+
+.carrito_producto, .carrito_cantidad, .carrito_precio {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.carrito_precio p {
+  font-family: "Montserrat-Bold";
+  color: rgb(243, 170, 24);
+  display: block;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.basura {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.basura img {
+  width: 50%;
+}
+
+.carrito_accion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.carrito_vaciar {
+  font-family: "Montserrat-Medium";
+  font-size: 18px;
+  color: white;
+  border: 0;
+  background-color: rgb(243, 170, 24);
+  padding: 15px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.carrito_comprar {
+  font-family: "Montserrat-Medium";
+  font-size: 18px;
+  color: white;
+  border: 0;
+  background-color: rgb(99, 25, 164);
+  padding: 15px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.disabled {
+  display: none;
+}
+
+/* ==========================================
+   MEDIA QUERIES (ORIGINALES)
+   ========================================== */
+/* TABLET 768 */
+@media (min-width: 768px) {
+  .menu ul {
+    flex-direction: row;
+    gap: 25px;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #carouselExampleIndicators {
+    display: block;
+  }
+
+  .card_contenedor {
+    width: 90%;
+    gap: 40px;
+  }
+
+  .card_product {
+    flex: 1 1 45%;
+  }
+
+  .logos {
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+/* LAPTOP-DESKTOP 1024 */
+@media (min-width: 1024px) {
+  .card_product {
+    flex: 1 1 30%;
+  }
+
+  .card_contenedor {
+    width: 85%;
+  }
+
+  .navbar a {
+    font-size: 1.1em;
+  }
+
+  .menu ul {
+    gap: 40px;
+  }
+
+  .logos_marcas {
+    width: 140px;
+  }
+}
+
+/* FULL-DESKTOP 1200 */
+@media (min-width: 1200px) {
+  .card_contenedor {
+    width: 75%;
+  }
+
+  .card_product {
+    flex: 1 1 23%;
+  }
+
+  .logos_marcas {
+    width: 150px;
+  }
+}
+
+/* FULL 1440 */
+@media (min-width: 1440px) {
+  .card_contenedor {
+    width: 70%;
+  }
+
+  .navbar {
+    padding: 10px 60px;
+  }
+
+  .card_product {
+    flex: 1 1 20%;
+  }
+}
