@@ -355,6 +355,109 @@ div.carousel-caption {
   margin: 20px 20px;
 }
 
+/* ======================
+   FORMULARIO DE CONTACTO
+   ======================*/
+
+#contacto {
+  background-color: #fcfcfc;
+  border-top: 1px solid rgb(243, 170, 24);
+  padding: 60px 20px;
+  width: 100%;
+}
+
+.contenedor_contacto {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo_contacto {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.titulo_contacto h2 {
+  font-family: "Montserrat-Bold", sans-serif;
+  color: rgb(99, 25, 164);
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.titulo_contacto p {
+  color: rgb(100, 100, 100);
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.form_contacto {
+  background-color: white;
+  border: 1px solid rgba(99, 25, 164, 0.1);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.grupo_formulario {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.label_contacto {
+  font-family: "Montserrat-Medium", sans-serif;
+  color: rgb(100, 100, 100);
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.input_custom {
+  font-family: "Montserrat-Regular", sans-serif;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  padding: 12px 15px;
+  font-size: 1.1rem;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input_custom:focus {
+  border-color: rgb(99, 25, 164);
+  box-shadow: 0 0 0 4px rgba(99, 25, 164, 0.15);
+}
+
+.contenedor_btn_contacto {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.boton_contacto {
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 18px;
+  color: white;
+  padding: 12px 40px;
+  background-color: rgb(243, 170, 24);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.boton_contacto:hover {
+  background-color: rgb(215, 148, 15);
+  transform: translateY(-2px);
+}
+
+.boton_contacto:active {
+  transform: translateY(0);
+}
+
 /* ======
    FOOTER
    ====== */

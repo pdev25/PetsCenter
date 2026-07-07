@@ -35,6 +35,7 @@
             <li><a href="index.html">Inicio</a></li>
             <li><a href="#productos">Productos</a></li>
             <li><a href="#nuestras_marcas">Marcas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
             <li><a href="carrito.html" class="nav-carrito">Carrito <span id="cart-count">0</span></a></li>
           </ul>
         </div>
@@ -217,6 +218,45 @@
       </section>
       </div>
     </main>
+
+ <!-- FORMULARIO DE CONTACTO -->
+
+<section id="contacto">
+  <div class="contenedor_contacto">
+    
+    <div class="titulo_contacto">
+      <h2>CONTACTANOS</h2>
+      <p>¿Tenés dudas o consultas? Escribinos, te responderemos a la brevedad.</p>
+    </div>
+    
+    <form action="#" method="POST" class="form_contacto">
+      <div class="grupo_formulario">
+        <label for="nombre" class="label_contacto">Nombre completo</label>
+        <input type="text" class="input_custom" id="nombre" name="nombre" required placeholder="Ingresá tu nombre">
+      </div>
+      
+      <div class="grupo_formulario">
+        <label for="email" class="label_contacto">Correo electrónico</label>
+        <input type="email" class="input_custom" id="email" name="email" required placeholder="ejemplo@correo.com">
+      </div>
+      
+      <div class="grupo_formulario">
+        <label for="telefono" class="label_contacto">Teléfono (Opcional)</label>
+        <input type="tel" class="input_custom" id="telefono" name="telefono" placeholder="Número de teléfono">
+      </div>
+      
+      <div class="grupo_formulario">
+        <label for="mensaje" class="label_contacto">Tu mensaje</label>
+        <textarea class="input_custom" id="mensaje" name="mensaje" rows="4" required placeholder="Escribí tu consulta ..."></textarea>
+      </div>
+      
+      <div class="contenedor_btn_contacto">
+        <button type="submit" class="boton_contacto"> <a href="#"></a>Enviar mensaje</button>
+      </div>
+    </form>
+
+  </div>
+</section>
 
     <!-- FOOTER -->
 
