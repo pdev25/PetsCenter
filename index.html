@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Pets - Tienda</title>
-    <!-- Bootstrap CSS -->
+
+    <!-- Bootstrap BANNER -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="fonts.css" />
@@ -12,6 +14,7 @@
   <body>
 
     <!-- NAVBAR -->
+
     <header>
       <nav class="navbar">
         <div class="logo">
@@ -19,20 +22,27 @@
             <img src="img/logo_pets_center.png" class="pets" alt="Logo Pets Center" />
           </a>
         </div>
-        <div class="hamburger" id="hamburger">☰</div>
+
+        <!-- MENÚ HAMBURGUESA -->
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <div class="menu" id="menu">
           <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="#">Perros</a></li>
-            <li><a href="#">Gatos</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#nuestras_marcas">Marcas</a></li>
             <li><a href="carrito.html" class="nav-carrito">Carrito <span id="cart-count">0</span></a></li>
           </ul>
         </div>
       </nav>
     </header>
 
-    <main>
       <!-- CAROUSEL -->
+
       <section class="d-none d-md-block">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
@@ -76,13 +86,14 @@
       </section>
 
       <!-- PRODUCTOS -->
-      <section>
+
+      <section id="productos">
         <div class="card_contenedor">
           
           <div class="card_product">
             <img src="img/cat_chow_carne.png" alt="Cat Chow gato adulto" class="alimento" />
             <h2>Cat Chow</h2>
-            <p>Cat Chow gato adulto</p>
+            <p>Gato adulto</p>
             <span>$50.000</span>
             <button class="boton btn-agregar" data-id="1" data-nombre="Cat Chow Gato Adulto" data-precio="50000" data-imagen="img/cat_chow_carne.png">Añadir al carrito</button>
           </div>
@@ -90,88 +101,88 @@
           <div class="card_product">
             <img src="img/excellent_gato_adulto.png" alt="Excellent gato adulto" class="alimento" />
             <h2>Excellent</h2>
-            <p>Excellent gato adulto</p>
-            <span>$50.000</span>
+            <p>Gato adulto</p>
+            <span>$70.000</span>
             <button class="boton btn-agregar" data-id="2" data-nombre="Excellent Gato Adulto" data-precio="50000" data-imagen="img/excellent_gato_adulto.png">Añadir al carrito</button>
           </div>
 
           <div class="card_product">
             <img src="img/performance_gato_adulto.png" alt="Performance gato adulto" class="alimento" />
             <h2>Performance</h2>
-            <p>Performance gato adulto</p>
-            <span>$50.000</span>
+            <p>Gato adulto</p>
+            <span>$85.000</span>
             <button class="boton btn-agregar" data-id="3" data-nombre="Performance Gato Adulto" data-precio="50000" data-imagen="img/performance_gato_adulto.png">Añadir al carrito</button>
           </div>
 
           <div class="card_product">
             <img src="img/proplan_gato_adulto.png" alt="proplan_gato_adulto" class="alimento" />
             <h2>Pro Plan</h2>
-            <p>Pro Plan gato adulto</p>
-            <span>$50.000</span>
+            <p>Gato adulto</p>
+            <span>$80.000</span>
             <button class="boton btn-agregar" data-id="4" data-nombre="Pro Plan Gato Adulto" data-precio="50000" data-imagen="img/proplan_gato_adulto.png">Añadir al carrito</button>
           </div>
 
           <div class="card_product">
-            <img src="img/cat_chow_carne.png" alt="old_prince_gato_adulto" class="alimento" />
-            <h2>Old Prince Carne</h2>
-            <p>Old Prince gato adulto</p>
-            <span>$50.000</span>
+            <img src="img/op-light-OK-DC.png" alt="old_prince_gato_adulto" class="alimento" />
+            <h2>Old Prince</h2>
+            <p>Perro mediano - Carne</p>
+            <span>$75.000</span>
             <button class="boton btn-agregar" data-id="5" data-nombre="Old Prince Gato Adulto (Carne)" data-precio="50000" data-imagen="img/cat_chow_carne.png">Añadir al carrito</button>
           </div>
 
           <div class="card_product">
-            <img src="img/excellent_gato_adulto.png" alt="old_prince_gato_adulto" class="alimento" />
-            <h2>Old Prince Select</h2>
-            <p>Old Prince gato adulto</p>
-            <span>$50.000</span>
+            <img src="img/dog-chow-cachorro-med-gde.png" alt="old_prince_gato_adulto" class="alimento" />
+            <h2>Dog Chow</h2>
+            <p>Perro adulto</p>
+            <span>$70.000</span>
             <button class="boton btn-agregar" data-id="6" data-nombre="Old Prince Gato Adulto (Select)" data-precio="50000" data-imagen="img/excellent_gato_adulto.png">Añadir al carrito</button>
           </div>
 
           <div class="card_product">
-            <img src="img/performance_gato_adulto.png" alt="old_prince_gato_adulto" class="alimento" />
-            <h2>Old Prince Pack</h2>
-            <p>Old Prince gato adulto</p>
-            <span>$50.000</span>
+            <img src="img/op-senior-OK-DC.png" alt="old_prince_gato_adulto" class="alimento" />
+            <h2>Old Prince</h2>
+            <p>Perro adulto - Cordero</p>
+            <span>$90.000</span>
             <button class="boton btn-agregar" data-id="7" data-nombre="Old Prince Gato Adulto (Pack)" data-precio="50000" data-imagen="img/performance_gato_adulto.png">Añadir al carrito</button>
           </div>
 
           <div class="card_product">
             <img src="img/old_prince_gato_adulto.png" alt="old_prince_gato_adulto" class="alimento" />
-            <h2>Old Prince Original</h2>
-            <p>Old Prince gato adulto</p>
-            <span>$50.000</span>
+            <h2>Old Prince</h2>
+            <p>Gato adulto - Equilibrium</p>
+            <span>$65.000</span>
             <button class="boton btn-agregar" data-id="8" data-nombre="Old Prince Original" data-precio="50000" data-imagen="img/old_prince_gato_adulto.png">Añadir al carrito</button>
           </div>
 
           <div class="card_product">
-            <img src="img/bolsa_1.png" alt="old_prince_gato_adulto" class="alimento" />
-            <h2>Bolsa Premium 1</h2>
-            <p>Performance gato adulto</p>
-            <span>$50.000</span>
+            <img src="img/perfo-adulto-15.png" alt="old_prince_gato_adulto" class="alimento" />
+            <h2>Performance</h2>
+            <p>Perro adulto - Digestivo</p>
+            <span>$80.000</span>
             <button class="boton btn-agregar" data-id="9" data-nombre="Bolsa Premium 1" data-precio="50000" data-imagen="img/bolsa_1.png">Añadir al carrito</button>
           </div>
 
           <div class="card_product">
-            <img src="img/bolsa_1.png" alt="old_prince_gato_adulto" class="alimento" />
-            <h2>Bolsa Premium 2</h2>
-            <p>Performance gato adulto</p>
-            <span>$50.000</span>
+            <img src="img/frances-dc.png" alt="old_prince_gato_adulto" class="alimento" />
+            <h2>Royal Canin</h2>
+            <p>Bulldog Francés</p>
+            <span>$60.000</span>
             <button class="boton btn-agregar" data-id="10" data-nombre="Bolsa Premium 2" data-precio="50000" data-imagen="img/bolsa_1.png">Añadir al carrito</button>
           </div>
 
           <div class="card_product">
-            <img src="img/bolsa_1.png" alt="old_prince_gato_adulto" class="alimento" />
-            <h2>Bolsa Premium 3</h2>
-            <p>Performance gato adulto</p>
-            <span>$50.000</span>
+            <img src="img/royal_maxi_adult.png" alt="old_prince_gato_adulto" class="alimento" />
+            <h2>Royal canin</h2>
+            <p>Maxi - adult</p>
+            <span>$85.000</span>
             <button class="boton btn-agregar" data-id="11" data-nombre="Bolsa Premium 3" data-precio="50000" data-imagen="img/bolsa_1.png">Añadir al carrito</button>
           </div>
 
           <div class="card_product">
             <img src="img/bolsa_1.png" alt="old_prince_gato_adulto" class="alimento" />
-            <h2>Bolsa Premium 4</h2>
-            <p>Performance gato adulto</p>
-            <span>$50.000</span>
+            <h2>Old Prince</h2>
+            <p>Gato adulto - Cerdo</p>
+            <span>$80.000</span>
             <button class="boton btn-agregar" data-id="12" data-nombre="Bolsa Premium 4" data-precio="50000" data-imagen="img/bolsa_1.png">Añadir al carrito</button>
           </div>
 
@@ -179,6 +190,8 @@
       </section>
 
       <!-- NUESTRAS MARCAS -->
+
+      <div id="nuestras_marcas"> 
       <section class="marcas">
         <div class="nuestras_marcas">
           <h4>NUESTRAS MARCAS</h4>
@@ -202,9 +215,11 @@
           <div><img src="img/whiskas.webp" alt="Whiskas" class="logos_marcas" /></div>
         </div>
       </section>
+      </div>
     </main>
 
     <!-- FOOTER -->
+
     <footer>
       <div class="contenedor_footer">
         <div class="logo_footer">
@@ -266,11 +281,12 @@
         </div>
       </div>
       <div class="copy">
-        <p>Pets Center S.A. © 2026 -<br class="salto-movil" /> Todos los derechos reservados</p>
+        <p>Pets Center S.A. © 2026 - Todos los derechos reservados</p>
       </div>
     </footer>
 
     <!-- Bootstrap JS Bundle -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
   </body>

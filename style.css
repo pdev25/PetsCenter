@@ -1,6 +1,7 @@
-/* ==========================================
-   CONFIGURACIÓN GENERAL Y RESET (ORIGINAL)
-   ========================================== */
+/* ======================
+   CONFIGURACIÓN GENERAL
+   ======================*/
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,15 +15,17 @@ html {
 body {
   font-family: "Montserrat-Regular";
   font-weight: 400;
+  padding-top: 75px;
 }
 
 main {
-  margin-top: 50px;
+  width: 100%;
 }
 
-/* ==========================================
-   NAVBAR (ORIGINAL + AJUSTE CONTADOR CARRITO)
-   ========================================== */
+/* ======
+   NAVBAR
+   ====== */
+
 .logo {
   margin: 0px 45px;
 }
@@ -39,6 +42,12 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box; /* Clave para que el padding no rompa el ancho total */
+  z-index: 1000;
 }
 
 .menu {
@@ -64,7 +73,8 @@ main {
   font-size: 1.2em;
 }
 
-/* Estilo integrado para el contador dinámico del carrito */
+/* carrito */
+
 #cart-count {
   background-color: rgb(243, 170, 24);
   color: white;
@@ -76,28 +86,32 @@ main {
   margin-left: 5px;
 }
 
-/* MENÚ HAMBURGUESA (Móvil) */
+/* ========================
+   MENÚ HAMBURGUESA (Móvil)
+   ======================== */
+   
 .hamburger {
   display: none;
-  font-size: 2rem;
-  color: white;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
   cursor: pointer;
   margin-left: auto;
-  margin-right: 20px;
+  margin-right: 25px;
+  z-index: 1100;
 }
 
-@media (max-width: 768px) {
-  .menu {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: rgb(99, 25, 164);
-    z-index: 1000;
-  }
+/* líneas hamburguesa */
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
   .menu ul {
     flex-direction: column;
@@ -107,21 +121,76 @@ main {
   }
 
   .menu li {
-    padding: 10px 0;
+    padding: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06); /* Separador sutil */
+  }
+
+  .menu li:last-child {
+    border-bottom: none;
+  }
+
+  .menu a {
+    display: block;
+    padding: 16px 0;
+    font-family: "Montserrat-Medium";
+    font-size: 1.15em;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  /* Media Queries menú hamburguesa */
+
+  @media (max-width: 768px) {
+  .menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(85, 20, 143); /* Tono un toque más oscuro para dar profundidad */
+    z-index: 1000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .menu a.nav-carrito {
+    color: rgb(243, 170, 24);
+    font-family: "Montserrat-Bold";
+  }
+
+  .menu a:active {
+    background-color: rgba(255, 255, 255, 0.08);
   }
 
   .menu.active {
-    max-height: 100vh;
+    max-height: 350px; /* Despliegue seguro para los links */
   }
 
   .hamburger {
-    display: block;
+    display: flex; /* Se activa el contenedor flex para las líneas */
+  }
+
+  /* ANIMACIÓN DE HAMBURGUESA A "X" (Se activa con JS agregando .active) */
+
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
   }
 }
 
-/* ==========================================
-   CAROUSEL (ORIGINAL)
-   ========================================== */
+/* ========
+   CAROUSEL
+   ======== */
+
 #carouselExampleIndicators {
   display: none;
 }
@@ -175,9 +244,10 @@ div.carousel-caption {
   border-radius: 50px;
 }
 
-/* ==========================================
-   PRODUCTOS (ORIGINAL)
-   ========================================== */
+/* =========
+   PRODUCTOS
+   ========= */
+
 .card_contenedor {
   display: flex;
   flex-wrap: wrap;
@@ -244,15 +314,10 @@ div.carousel-caption {
   cursor: pointer;
 }
 
-.banner {
-  width: 100%;
-  height: 500px;
-  background-color: antiquewhite;
-}
+/* ===============
+   NUESTRAS MARCAS
+   =============== */
 
-/* ==========================================
-   NUESTRAS MARCAS (ORIGINAL)
-   ========================================== */
 .marcas {
   display: flex;
   flex-flow: row wrap;
@@ -290,39 +355,24 @@ div.carousel-caption {
   margin: 20px 20px;
 }
 
-/* ==========================================
-   FOOTER (ORIGINAL)
-   ========================================== */
+/* ======
+   FOOTER
+   ====== */
+
 .contenedor_footer {
   display: flex;
   flex-flow: column wrap;
   background-color: rgb(99, 25, 164);
-  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
   margin-top: 100px;
-}
-
-.contenedor_footer_2 {
-  margin: 0px auto 100px;
-  display: flex;
-  flex-flow: row wrap;
-  width: 100%;
-  justify-content: space-evenly;
-}
-
-.item_footer_1 {
-  display: flex;
-  flex-flow: row wrap;
-  width: 150px;
-  margin-top: 50px;
-  margin-left: 30px;
-  justify-content: left;
 }
 
 .logo_footer {
   margin: 100px auto 0px;
   display: flex;
   flex-flow: row wrap;
-  width: 73%;
+  width: 85%; 
   border-bottom: solid 1px rgb(255, 255, 255);
   justify-content: left;
 }
@@ -331,6 +381,22 @@ div.carousel-caption {
   width: 150px;
   height: auto;
   margin-bottom: 15px;
+}
+
+.contenedor_footer_2 {
+  margin: 0px auto 100px;
+  display: flex;
+  flex-flow: row wrap;
+  width: 85%;
+  justify-content: space-between;
+}
+
+.item_footer_1 {
+  display: flex;
+  flex-flow: row wrap;
+  width: 150px;
+  margin-top: 50px;
+  justify-content: left;
 }
 
 .tienda_online h3 {
@@ -369,9 +435,10 @@ div.carousel-caption {
   display: flex;
 }
 
-/* ==========================================
-   VISTA DEL CARRITO (ORIGINAL)
-   ========================================== */
+/* ==================
+   VISTA DEL CARRITO
+   ================== */
+
 .contenedor_carrito {
   display: flex;
   flex-direction: column;
@@ -402,7 +469,7 @@ div.carousel-caption {
 .tu_carrito h1 {
   width: auto;
   display: block;
-  margin: 0;
+  margin: 100px 0;
   font-family: "Montserrat-Bold";
   color: rgb(99, 25, 164);
   font-size: 3.5em;
@@ -491,10 +558,12 @@ div.carousel-caption {
   display: none;
 }
 
-/* ==========================================
-   MEDIA QUERIES (ORIGINALES)
-   ========================================== */
+/* ==============
+   MEDIA QUERIES
+   ============== */
+
 /* TABLET 768 */
+
 @media (min-width: 768px) {
   .menu ul {
     flex-direction: row;
@@ -524,9 +593,14 @@ div.carousel-caption {
     justify-content: center;
     gap: 30px;
   }
+
+  .logo_footer, .contenedor_footer_2 {
+    width: 90%;
+  }
 }
 
 /* LAPTOP-DESKTOP 1024 */
+
 @media (min-width: 1024px) {
   .card_product {
     flex: 1 1 30%;
@@ -547,9 +621,14 @@ div.carousel-caption {
   .logos_marcas {
     width: 140px;
   }
+
+  .logo_footer, .contenedor_footer_2 {
+    width: 80%;
+  }
 }
 
 /* FULL-DESKTOP 1200 */
+
 @media (min-width: 1200px) {
   .card_contenedor {
     width: 75%;
@@ -562,9 +641,14 @@ div.carousel-caption {
   .logos_marcas {
     width: 150px;
   }
+
+  .logo_footer, .contenedor_footer_2 {
+    width: 73%;
+  }
 }
 
 /* FULL 1440 */
+
 @media (min-width: 1440px) {
   .card_contenedor {
     width: 70%;
@@ -577,4 +661,30 @@ div.carousel-caption {
   .card_product {
     flex: 1 1 20%;
   }
+}
+
+/* ================
+   AJUSTE DE FOOTER
+   ================ */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper_carrito {
+  flex: 1 0 auto; 
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+/* ================
+   
+   ================ */
+
+section {
+  scroll-margin-top: 85px; /* Hace que el scroll se detenga un poquito antes para que el menú fijo no tape los títulos */
 }

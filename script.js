@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+
   // --- MENÚ HAMBURGUESA ---
+
   const hamburger = document.getElementById("hamburger");
   const menu = document.getElementById("menu");
   if (hamburger && menu) {
@@ -9,9 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- LÓGICA DE ALMACENAMIENTO (LOCALSTORAGE) ---
+
   let carrito = JSON.parse(localStorage.getItem("items-carrito")) || [];
 
-  // Actualiza la burbuja del número de items en el nav si existe
+  // Actualización número de items
+
   function actualizarBurbujaNav() {
     const cartCountEl = document.getElementById("cart-count");
     if (cartCountEl) {
@@ -22,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   actualizarBurbujaNav();
 
   // --- COMPORTAMIENTO VISTA INDEX (AÑADIR) ---
+
   const botonesAgregar = document.querySelectorAll(".btn-agregar");
   botonesAgregar.forEach(boton => {
     boton.addEventListener("click", (e) => {
@@ -31,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const imagen = e.target.getAttribute("data-imagen");
 
       // Comprobar si ya existe el producto
+
       const existe = carrito.find(item => item.id === id);
       if (existe) {
         existe.cantidad++;
@@ -45,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // --- COMPORTAMIENTO VISTA CARRITO (RENDER Y CONTROL) ---
+
   const listaProductosContenedor = document.getElementById("productos-carrito-lista");
   
   function renderizarCarrito() {
@@ -101,7 +108,9 @@ document.addEventListener("DOMContentLoaded", () => {
     botonesEliminar.forEach(boton => {
       boton.addEventListener("click", (e) => {
         const idEliminar = e.currentTarget.getAttribute("data-id");
-        // Filtramos para remover el item completo
+
+        // FiltrO para remover el item completo
+
         carrito = carrito.filter(item => item.id !== idEliminar);
         localStorage.setItem("items-carrito", JSON.stringify(carrito));
         renderizarCarrito();
@@ -111,6 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Botón Vaciar
+
   const btnVaciar = document.getElementById("btn-vaciar");
   if (btnVaciar) {
     btnVaciar.addEventListener("click", () => {
@@ -122,6 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Botón Comprar
+
   const btnComprar = document.getElementById("btn-comprar");
   if (btnComprar) {
     btnComprar.addEventListener("click", () => {
@@ -135,5 +146,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Inicializar render de tabla si corresponde
+  
   renderizarCarrito();
 });

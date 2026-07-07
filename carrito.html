@@ -9,62 +9,118 @@
   </head>
   <body>
 
-    <!-- NAVBAR -->
-    <header>
-      <nav class="navbar">
-        <div class="logo">
-          <a href="index.html">
-            <img src="img/logo_pets_center.png" class="pets" alt="Logo" />
-          </a>
-        </div>
-        <div class="hamburger" id="hamburger">☰</div>
-        <div class="menu" id="menu">
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="#">Perros</a></li>
-            <li><a href="#">Gatos</a></li>
-            <li><a href="carrito.html">Carrito</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+    <div class="wrapper_carrito">
+      
+      <header>
+        <nav class="navbar">
+          <div class="logo">
+            <a href="index.html">
+              <img src="img/logo_pets_center.png" class="pets" alt="Logo" />
+            </a>
+          </div>
+          <div class="hamburger" id="hamburger">☰</div>
+          <div class="menu" id="menu">
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="index.html">Productos</a></li>
+              <li><a href="index.html">Marcas</a></li>
+              <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>z
 
-    <main>
-      <section class="container my-5">
-        
-        <!-- Estado Vacío -->
-        <div id="carrito-vacio-msg" class="tu_carrito">
-            <h1>TU CARRITO</h1>
-            <span>(vacío)</span>
-        </div>
-        
-        <!-- Contenedor Principal del Carrito -->
-        <div id="contenedor-carrito-completo" class="contenedor_carrito disabled">
+      <main>
+        <section class="container my-5">
           
-          <!-- Acá adentro JS va a inyectar los productos dinámicamente -->
-          <div id="productos-carrito-lista"></div>
+          <div id="carrito-vacio-msg" class="tu_carrito">
+              <h1>TU CARRITO</h1>
+              <span>(vacío)</span>
+          </div>
+          
+          <div id="contenedor-carrito-completo" class="contenedor_carrito disabled">
+            
+            <div id="productos-carrito-lista"></div>
 
-          <!-- Acciones del Carrito -->
-          <div class="carrito_accion">
-              <button id="btn-vaciar" class="carrito_vaciar">Vaciar Carrito</button>
-              <div class="carrito_precio_total">
-                <p>TOTAL:</p>
-                <h3 id="Total">$0</h3>
-              </div>
-              <button id="btn-comprar" class="carrito_comprar">Comprar</button>
+            <div class="carrito_accion">
+                <button id="btn-vaciar" class="carrito_vaciar">Vaciar Carrito</button>
+                <div class="carrito_precio_total">
+                  <p>TOTAL:</p>
+                  <h3 id="Total">$0</h3>
+                </div>
+                <button id="btn-comprar" class="carrito_comprar">Comprar</button>
+            </div>
+          </div>
+
+          <div id="mensaje-compra" class="tu_carrito disabled">
+              <h1>¡GRACIAS POR TU COMPRA!</h1>
+          </div>
+        </section>
+      </main>
+
+    </div>
+    <footer>
+      <div class="contenedor_footer">
+        <div class="logo_footer">
+          <img src="img/logo_pets_center.png" alt="logo_empresa">
+        </div>
+        <div class="contenedor_footer_2">
+          <div class="item_footer_1">
+            <div class="tienda_online">
+              <h3>Tienda Online</h3>
+              <a href="#">Perros</a>
+              <a href="#">Gatos</a>
+              <a href="#">Marcas</a>
+              <a href="#">Conocé Pets Center</a>
+              <a href="#">Blog</a>
+              <a href="#">Arenas</a>
+              <a href="#">Accesorios</a>
+              <a href="#">Pets Fun</a>
+            </div>
+          </div>
+          <div class="item_footer_1">
+            <div class="tienda_online">
+              <h3>Perros</h3>
+              <a href="#">Therapy</a>
+              <a href="#">Balanced</a>
+              <a href="#">Balanced NR</a>
+              <a href="#">Complete</a>
+              <a href="#">Nutrique</a>
+              <a href="#">Premium</a>
+              <a href="#">HOP!</a>
+              <a href="#">Belcan</a>
+            </div>
+          </div>
+          <div class="item_footer_1">
+            <div class="tienda_online">
+              <h3>Gatos</h3>
+              <a href="#">Therapy</a>
+              <a href="#">Balanced</a>
+              <a href="#">Balanced NR</a>
+              <a href="#">Complete</a>
+              <a href="#">Nutrique</a>
+              <a href="#">Premium</a>
+              <a href="#">HOP!</a>
+              <a href="#">Belcan</a>
+            </div>
+          </div>
+          <div class="item_footer_1">
+            <div class="tienda_online">
+              <h3>Servicios</h3>
+              <a href="#">Envíos</a>
+              <a href="#">Cambios</a>
+              <a href="#">Descuentos Banc.</a>
+              <a href="#">Devoluciones</a>
+              <a href="#">Consumidor</a>
+              <a href="#">Legales</a>
+              <a href="#">Feriados</a>
+              <a href="#">Arrepentimiento</a>
+            </div>
           </div>
         </div>
-
-        <!-- Mensaje de Éxito -->
-        <div id="mensaje-compra" class="tu_carrito disabled">
-            <h1>¡GRACIAS POR TU COMPRA!</h1>
-        </div>
-      </section>
-    </main>
-
-    <footer>
+      </div>
       <div class="copy">
-        <p>Pets Center S.A. © 2026 - Todos los derechos reservados</p>
+        <p>Pets Center S.A. © 2026 -<br class="salto-movil" /> Todos los derechos reservados</p>
       </div>
     </footer>
 
