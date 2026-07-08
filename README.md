@@ -1,6 +1,4 @@
-<img width="1904" height="950" alt="captura3" src="https://github.com/user-attachments/assets/f7b6a417-fa5b-4e4d-99d5-d7178d508b3f" />
-<img width="1905" height="951" alt="captura2" src="https://github.com/user-attachments/assets/a7d61e35-1565-4631-a372-94f072c7cc9d" />
-<img width="1903" height="951" alt="captura1" src="https://github.com/user-attachments/assets/7f7e7f2d-92d9-478a-98b9-003481c20404" />
+
 # :cat: :dog: Pets Center
 
 > Sitio limpio, minimalista, responsive y con carrito funcional, diseñado para la marca Pets Center, centro de distribución de alimentos para mascotas.
@@ -15,11 +13,11 @@ Proyecto diseñado y desarrollado para el centro de distribución de alimentos p
 
 Algunas capturas del sitio
 
-![captura1.png](/home/pato/Escritorio/captura1.png)
+<img width="1903" height="951" alt="captura1" src="https://github.com/user-attachments/assets/7f7e7f2d-92d9-478a-98b9-003481c20404" />
 
-![captura2.png](/home/pato/Escritorio/captura2.png)
+<img width="1905" height="951" alt="captura2" src="https://github.com/user-attachments/assets/a7d61e35-1565-4631-a372-94f072c7cc9d" />
 
-![captura3.png](/home/pato/Escritorio/captura3.png)
+<img width="1904" height="950" alt="captura3" src="https://github.com/user-attachments/assets/f7b6a417-fa5b-4e4d-99d5-d7178d508b3f" />
 
 ### :pencil: Características Principales
 
